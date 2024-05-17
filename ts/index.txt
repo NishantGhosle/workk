@@ -1,0 +1,86 @@
+###What is typescript
+Typescript is an open source language and is a superset of javascript
+
+Offers additional features to javascript including static types.
+
+Using types is completely optional/
+
+Compiles down to regular JavaScript.
+
+Can be used for frontend as well as backend with Nodejs.
+
+Includes most features ES6, ES7 (classes, arro functions etc).
+
+Types from 3rd party libraries can be added with type definitions.
+
+### Dynamic vs static typing
+
+In dynamically types languages, the types are associated with run-time values and not named explicity in your code.
+
+In statically typed languages, you explicitly assign types to variables, function parameters. return values etc.
+
+### Pros and cons
+Pros :- More robust, Easily spot bugs, Predictablility, Readability, Popular
+
+Cons :- More code to write, More to learn, Required compilation, Not true static typing.
+
+### Compiling typescript
+
+Typescript uses .ts and .tsx extensions.
+
+TSC(Typescript compiler) is used to compile .ts file down to js .
+
+Can watch files and report errors at compile time.
+
+Many tools include ts compilation by default.
+
+Most IDEs have great support for ts.
+
+The tsconfig.json file is used to configure how typescript works.
+
+Install ts 
+npm install typescript --save-dev
+
+Set Up TypeScript Configuration
+npx tsc --init
+
+### Types
+Boolean, Number, String, Array, Tuple, Enum, Unknown, Any, Void, Null and Undefined, Never, Object
+
+### Array and Tuples
+
+Array :- 
+let list: number[] = [1, 2, 3];
+let names: string[] = ["Alice", "Bob", "Charlie"];
+
+Tuple :-
+let tuple: [string, number];
+tuple = ["hello", 10]; 
+
+### Unions and ENUM
+
+Unions :-
+Unions allow you to use variables with more than one type.
+
+Enums :-
+Enums allow you to define a set of named constants.
+
+### Type insertion 
+Type assertion is a powerful tool in TypeScript for overriding the inferred type of a value, but it should be used judiciously to avoid potential runtime errors.
+
+### Interfaces 
+Interfaces in TypeScript define object shapes, specifying required properties and methods for types. They promote code clarity and type safety.
+
+### Function Interfaces 
+Function interfaces in TypeScript define the shape of functions, specifying parameter types and return type for type safety and clarity.
+
+### Data modifiers
+Data modifiers in TypeScript, like readonly and optional, specify properties' immutability and optionality for type safety and clarity.
+
+### Generics
+
+Generics in TypeScript enable writing reusable components that work with multiple data types, enhancing type safety and code flexibility.
+
+### TypeScript with React
+
+npx create-react-app my-app --template typescript

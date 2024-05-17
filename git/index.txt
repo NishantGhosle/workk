@@ -1,0 +1,74 @@
+### Git & GitHub Notes
+
+Git is a version control system that tracks changes to files in a project over time, showing who made which changes and when.
+
+GitHub is an online platform for hosting Git repositories, which are folders where project changes are stored.
+
+#### Terminal Commands
+
+Creating and Navigating Folders
+- Create a new folder: mkdir <folder-name> (mkdir = make directory)
+- Enter the folder: cd <folder-name>
+
+Initializing a Repository
+- Initialize a local Git repository: git init
+
+File Operations
+- Create a new file: touch <file-name>
+
+Tracking Changes
+- Show the working directory status:  git status 
+- Add changes to the staging area:  git add . 
+- Commit changes with a message:  git commit -m "your message" 
+- Remove a file from the staging area:  git restore --staged <file-name> 
+
+ Viewing History: 
+- View commit history:  git log 
+- View detailed commit history:  git log --summary 
+
+ Undoing Changes: 
+- Reset to a specific commit:  git reset <commit-hash>  (removes all commits above this hash, placing them in the unstaged area)
+
+ Stashing Changes: 
+- Stash changes:  git stash 
+- Apply stashed changes:  git stash pop 
+- Clear all stashes:  git stash clear 
+
+#### Branching & Merging
+
+ Branch Operations: 
+- List branches:  git branch 
+- List all branches (local and remote):  git branch -a 
+- Create a new branch:  git branch <branch-name> 
+- Delete a branch:  git branch -d <branch-name> 
+- Delete a remote branch:  git push origin --delete <branch-name> 
+- Create and switch to a new branch:  git checkout -b <branch-name> 
+- Clone and switch to a remote branch:  git checkout -b <branch-name> origin/<branch-name> 
+- Rename a branch:  git branch -m <old-name> <new-name> 
+- Switch to a branch:  git checkout <branch-name> 
+- Switch to the previous branch:  git checkout - 
+
+ Merging Branches: 
+- Merge a branch into the current branch:  git merge <branch-name> 
+
+#### Sharing & Updating Projects
+
+ Pushing and Pulling: 
+- Push a branch to a remote repository:  git push origin <branch-name> 
+- Push changes and set upstream tracking:  git push -u origin <branch-name> 
+- Update local repository with remote changes:  git pull 
+- Pull changes from a specific branch:  git pull origin <branch-name> 
+
+ Working with Forks: 
+- Clone a project:  git clone <project-url> 
+- Fetch updates from the original repository: 
+  - Fetch upstream changes:  git fetch --all --prune 
+  - Reset local main branch to upstream:  git reset --hard upstream/main 
+  - Push changes to your fork:  git push origin main 
+  - Alternatively, pull updates:  git pull upstream main 
+
+ Rebasing: 
+- Combine multiple commits into one:  git rebase -i <commit-hash>  
+
+#### Handling Merge Conflicts
+- If two people modify the same line, a conflict will arise that needs to be resolved manually before proceeding with the merge.
