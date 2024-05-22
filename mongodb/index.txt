@@ -1,0 +1,54 @@
+# Switch to a database 
+use my_database
+
+# Show current database
+db
+
+# Show all databases
+show dbs
+
+# Create a collection 
+db.createCollection("my_collection")
+
+# Show all collections
+show collections
+
+# Drop a collection
+db.my_collection.drop()
+
+# Drop the database
+db.dropDatabase()
+
+# Insert a single document
+db.my_collection.insertOne({name: "Alice", age: 30})
+
+# Insert multiple documents
+db.my_collection.insertMany([{name: "Bob", age: 25}, {name: "Charlie", age: 35}])
+
+# Find all documents
+db.my_collection.find()
+
+# Find one document
+db.my_collection.findOne()
+
+# Find documents with a condition
+db.my_collection.find({age: 30})
+
+# Projection - include specific fields
+db.my_collection.find({age: 30}, {name: 1, age: 1})
+
+# Projection - exclude specific fields
+db.my_collection.find({age: 30}, {age: 0})
+
+# Count documents
+db.my_collection.countDocuments({age: 30})
+
+# Update a single document
+db.my_collection.updateOne({name: "Alice"}, {$set: {age: 31}})
+
+# Update multiple documents
+db.my_collection.updateMany({age: {$lt: 30}}, {$set: {status: "young"}})
+
+projection only selected 
+mongodump is for exporting all databases
+for single dump -d databasename 
