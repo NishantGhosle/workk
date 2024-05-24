@@ -11,7 +11,9 @@ const ProductList = () => {
 
   const getProducts = async () => {
     try {
-      const res = await axios.get("/products");
+      const res = await axios.get("/products", {
+        timeout: 10000,
+      });
       console.log(res.data);
       setProducts(res.data);
       setTotal(res.data.length);
