@@ -10,10 +10,14 @@ const ProductList = () => {
   const [total, setTotal] = useState(0);
 
   const getProducts = async () => {
-    const res = await axios.get("/products");
-    console.log(res.data);
-    setProducts(res.data);
-    setTotal(res.data.length);
+    try {
+      const res = await axios.get("/products");
+      console.log(res.data);
+      setProducts(res.data);
+      setTotal(res.data.length);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
   };
 
   const handleClick = async (id) => {
