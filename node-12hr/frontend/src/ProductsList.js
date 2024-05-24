@@ -29,26 +29,12 @@ const ProductList = () => {
     setProducts(res.data);
   };
 
-  // const handleSort = async (e) => {
-  //   const field = e.target.value.split(".");
-  //   const res = await axios.get(`/products?sort=${field[0]}&order=${field[1]}`);
-  //   console.log(res.data);
-  //   setProducts(res.data);
-  // };
-
   useEffect(() => {
     getProducts();
   }, []);
 
   return (
     <>
-      {/* <select onChange={handleSort}>
-        <option value="price.desc">Price High to Low</option>
-        <option value="price.asc">Price Low to High</option>
-        <option value="rating.desc">Rating High to Low</option>
-        <option value="rating.asc">Rating Low to High</option>
-      </select> */}
-
       {Array(Math.ceil(total / 4))
         .fill(0)
         .map((e, i) => (

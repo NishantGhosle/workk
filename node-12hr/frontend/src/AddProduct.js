@@ -27,9 +27,7 @@ const AddProduct = () => {
   return (
     <form className="form-horizontal" onSubmit={handleSubmit}>
       <fieldset>
-        {/* Form Name */}
         <legend> Add Product</legend>
-        {/* Text input*/}
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="title">
             Title
@@ -75,7 +73,6 @@ const AddProduct = () => {
             />
           </div>
         </div>
-        {/* Select Basic */}
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="category">
             Category
@@ -93,7 +90,6 @@ const AddProduct = () => {
             </select>
           </div>
         </div>
-        {/* Select Basic */}
         <div className="form-group">
           <label className="col-md-4 control-label" htmlFor="brand">
             Brand
@@ -111,7 +107,6 @@ const AddProduct = () => {
             </select>
           </div>
         </div>
-        {/* Text input*/}
         <div className="form-group">
           <label
             className="col-md-4 control-label"
@@ -131,7 +126,6 @@ const AddProduct = () => {
             <span className="help-block">help</span>
           </div>
         </div>
-        {/* Button */}
         <div className="form-group">
           <div className="col-md-4">
             <button
