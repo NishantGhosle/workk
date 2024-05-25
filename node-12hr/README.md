@@ -74,3 +74,24 @@ Array
 
 Sending data from frontend to backend
 Installing CORS package to allow cross origin request from React JS server to NodeJS server as they are on different hosts.
+
+# Server Side Rendering
+
+Done by ejs but here are few more like pug and handlebars
+
+By using <% %> syntax
+output with <%= %>
+
+# Authentication with JWT
+
+Using jsonwebtoken packeage for this
+3 parts of JWT - headers, payload, signature
+bcrypt for password hashing
+
+# Events, Streams, Sockets - socket.io
+
+Mongoose query for sorting
+like -1 for bottom to top seeing results
+On the basis of product, title etc.
+
+WebSockets are powerful tools for creating dynamic, real-time web applications, providing a more efficient and responsive communication method compared to traditional HTTP-based approaches.
